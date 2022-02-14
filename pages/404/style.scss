@@ -1,0 +1,64 @@
+@import "../../scss/main";
+
+.header{
+    @include TbannerHeader;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    & > span{
+        display: block;
+    }
+}
+.overflow-404{
+    color: rgba($color: $orange, $alpha: 0.5);
+    font-family: Montserrat;
+    font-size: 144px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.description{
+    // color: ;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 53px;
+    color: #787878;
+    @include TblockText;
+    & > a{
+        position: relative;
+        background-color: $orange;
+        color: $white;
+        text-decoration: none;
+        padding: 8px 16px;
+        &::before,&::after{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background-color: $white;
+            transform: rotate(45deg);
+        }
+        &::before{
+            left: -2px;
+            top: -6px;  
+        }
+        &::after{
+            right: -2px;
+            bottom: -6px;
+        }
+    }
+}
+.cont{
+    @media (max-width:500px){
+        transform: scale(0.9);
+    }
+    @media (max-width:400px){
+        transform: scale(0.8);
+    }
+}
+

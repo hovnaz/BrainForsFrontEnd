@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="left">
+                <img class="logo" src="../../static/icon/logo.svg" alt="logo">
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="anim item">Projects</li>
+                    <li class="anim item">Choose an apartment </li>
+                    <li class="anim item">Contact</li>
+                    <li class="anim item">Discounts</li>
+                    <li>
+                        <a href="#" class="btn-orange-bg phone">
+                            <img src="../../static/icon/phone.svg" alt="phone">
+                            (+374) 15-15-54
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../static/icon/liveIconInBanner.svg" alt="liveIconInBanner">
+                        </a>
+                    </li>
+                    <li class="anim item">Hy</li>
+                    <li class="anim item">Log In</li>
+                    <li class="menu">
+                        <img src="../../static/icon/menu-bar.svg" alt="menu">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="form-filter-btn">
+            <h2>Choose your apartment</h2>
+            <img src="../../static/icon/filter.svg" alt="filter">
+        </div>
+        <div id="form">
+            <div class="content">
+                <div class="top">
+                    <span class="select-input" data-select="Region" data-placeholder="Region"></span>
+                    <span class="select-input" data-select="District" data-placeholder="District"></span>
+                    <span class="select-input half" data-select="floor" data-placeholder="floor"></span>
+                </div>
+                <div class="down">
+                    <div class="item room">
+                        <h2 class="header">Number of rooms</h2>
+                        <label class="container-checkbox">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark">1</span>
+                        </label>
+                        <label class="container-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark">2</span>
+                        </label>
+                        <label class="container-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark">3</span>
+                        </label>
+                        <label class="container-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark">4</span>
+                        </label>
+                        <label class="container-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark">5</span>
+                        </label>
+                    </div>
+                    <div class="item btn">
+                        <button class="btn-orange-border">Special offers</button>
+                    </div>
+                    <div class="item slide-range">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider">
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert">
+                <h4>Found apartments</h4>
+                <h2>25</h2>
+                <button><img src="../../static/icon/close.svg" alt="close"> Remove Filters</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="stack">
+        <img class="left" src="../../static/png/stack.png" alt="stack">
+    </div>
+
+
+
+    <div class="container" style="display: flex;justify-content: center;flex-flow: wrap;">
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="header owl-carousel owl-theme">
+                <img src="../../static/jpg/1.jpg" alt="image">
+                <img src="../../static/jpg/2.jpg" alt="image">
+                <img src="../../static/jpg/3.jpg" alt="image">
+            </div>
+            <div class="content">
+                <h2>Project “Riven’’ </h2>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
+                        Location, address
+                    </span>
+                </span>
+                <span class="item">
+                    <span>
+                        <img src="../../static/icon/floor.svg" alt="bulding">
+                        3 floor
+                    </span>
+                    <span>
+                        <img src="../../static/icon/size.svg" alt="bulding">
+                        52 sqft
+                    </span>
+                    <span>
+                        <img src="../../static/icon/door.svg" alt="bulding">
+                        4 rooms
+                    </span>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="pages">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+    </div>
+
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="left">
+                <img class="logo" src="../../static/icon/logo.svg" alt="logo">
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="anim item">Home</li>
+                    <li class="anim item">Projects</li>
+                    <li class="anim item">Choose an apartment </li>
+                    <li class="anim item">Contact info</li>
+                    <li class="anim item">Discounts</li>
+                    <li class="anim item">Privacy policy</li>
+                    <li class="anim item">Terms of use</li>
+                    <li class="item">
+                        <a href="#" class="btn-orange-bg">
+                            <img src="../../static/icon/phone.svg" alt="phone">
+                            (+374) 15-15-54
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="container-row" style="background-color: #000;border-top: 1px solid #fff;">
+        <div class="container">
+            <footer id="footer-copyright">
+                <span>Copyright © 2021 New City. All rights reserved</span>
+                <span>
+                    <a href="#">
+                        <img src="../../static/icon/vk.svg" alt="vk">
+                    </a>
+                    <a href="#">
+                        <img src="../../static/icon/fb.svg" alt="fb">
+                    </a>
+                    <a href="#">
+                        <img src="../../static/icon/twitter.svg" alt="twitter">
+                    </a>
+                    <a href="#">
+                        <img src="../../static/icon/email.svg" alt="email">
+                    </a>
+                </span>
+            </footer>
+
+            </footer>
+        </div>
+    </div>
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 35,
+            nav: true,
+            dots: false,
+            navText: ['<img src="../../static/icon/arrow-left.svg" alt="left">', '<img src="../../static/icon/arrow-right.svg" alt="right">'],
+            items: 1,
+        })
+    </script>
+</body>
+
+</html>

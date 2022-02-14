@@ -1,0 +1,17 @@
+@import "../../scss/main";
+
+.container{
+    & > .project-card{
+        margin-bottom: 30px;
+        margin-right: 42px;
+    }
+}
+
+.container{
+    @media (max-width:990px) {
+        .project-card{
+            flex: 50%;
+            margin-right: 0.1px;
+        }
+    }
+}

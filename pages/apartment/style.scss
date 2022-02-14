@@ -1,0 +1,170 @@
+@import "../../scss/main";
+
+#header-baner{
+    display: flex;
+    justify-content: space-between;
+    & > .status{
+        margin-right: 13px;
+        width: 306px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        border-radius: 12px;
+        overflow: hidden;
+        & > header{
+            padding: 23px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: $grey-4;
+            box-shadow: inherit;
+            & > img{
+                margin-right: 12px;
+            }
+        }
+        & > .content{
+            padding: 23px;
+            padding-top: 54px;
+            position: relative;
+            & > .row{
+                margin-bottom: 50px;
+                // &:first-child{margin-right: 64px;}
+                display: flex;
+                justify-content: flex-start;
+                & > *{
+                    position: relative;
+                    flex: 50%;
+
+                    &:first-child{
+                        margin-right: 10px;
+                    }
+                    &::before{
+                        content: attr(data-title);
+                        position: absolute;
+                        top: -18px;
+                        left: 0;
+                        color: $grey-2;
+                        @include oneLine;
+                    }
+                }
+            }
+        }
+    }
+    & > .content{
+        position: relative;
+        display: flex;
+        & > .inside{
+            z-index: 9999;
+             & > *{
+                position: absolute;
+            }
+            .status{
+                @include TblockText;
+                left: 28px;
+                bottom: 20px;
+                color: $white;
+                & > .item:not(:last-child){margin-bottom: 8px;}
+
+                & > .item{display: block;}
+            }
+            .btn{
+                right: 23px;
+                bottom: 7px;
+            }
+            .sale{
+                width: 88px;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: $orange;
+                color: $white;
+                border-radius: 50%;
+                top: 22px;
+                left: 22px;
+                text-align: center;
+                & > h2{
+                    @include Theader;
+                }
+                & > span{
+                    font-weight: 500;
+                }
+            }
+        }
+        & > .grid{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-row-gap: 17px;
+            grid-column-gap: 11px;
+        }
+        & img{height: 100%;}
+        & > .left{
+            position: relative;
+            overflow: hidden;
+            margin-right: 10px;
+
+            // &::before{
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: rgba($color: $black, $alpha: 0.2);
+            // }
+        }
+    }
+}
+.text-only{
+    color: $neutrals-black;
+    margin-top: 19px;
+}
+.header-only{
+    @include Theader;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bulding-image{
+    width: 100%;margin-bottom: 20px;
+}
+
+
+
+@media (max-width:1400px) {
+    #header-baner{
+        flex-wrap: wrap;
+        & > .status{
+            min-width: 306px;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 50%;
+        }
+        & > .content{
+            margin: 0 auto;
+        }
+    }
+}
+@media (max-width:990px) {
+    #header-baner{
+        & > .content{
+            width: 100%;
+        }
+    }
+}
+@media (max-width:770px) {
+    #header-baner{
+        & > .content > .grid{
+            grid-template-columns: auto;
+        }
+    }
+}
+@media (max-width:500px) {
+    #header-baner{
+        & > .content {
+            & > .inside{
+                .sale{transform: scale(0.8);}
+                .status{display: none;}
+            }
+        }
+    }
+}

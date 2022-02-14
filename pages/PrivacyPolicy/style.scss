@@ -1,0 +1,36 @@
+@import "../../scss/main";
+
+body{padding-top: 115px;}
+
+#header-baner{
+    width: 100%;
+    height: 169px;
+    padding-left: 87px;
+    display: flex;
+    align-items: center;
+    @include TbannerHeader;
+    color: #fff;
+    background-image: url("../../static/jpg/header-baner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-text{
+    color: $black;
+    margin-top: 115px;
+    h2{
+        @include TbannerHeader;
+        font-size: 36px;
+        line-height: 73px;
+    }
+    p{font-size: 14px;}
+}
+.stack{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    & > img{
+        position: relative;
+        width: 100%;
+    }
+}

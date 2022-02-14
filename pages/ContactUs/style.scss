@@ -1,0 +1,55 @@
+@import "../../scss/main";
+
+#content{
+    display: flex;
+    justify-content: space-between;
+    & > .info{
+        margin-right: 20px;
+        width: 306px;
+        box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25);
+        padding-top: 23px;
+        padding-bottom: 23px;
+        padding-left: 17px;
+        padding-right: 17px;
+        h2{
+            @include TblockTextBold;
+            margin-bottom: 20px;
+        }
+        & > img{
+            margin-bottom: 20px;
+        }
+        .row{
+            margin-bottom: 16px;
+            display: flex;
+            align-self: center;
+            color: $grey-4;
+            img{
+                width: 16px;
+                margin-right: 13px;
+            }
+        }
+        button{
+            margin-top: 40px;
+            width: 80%;
+            border-radius: 0;
+        }
+    }
+    .map{width: 100%;}
+    #map{
+        flex: 50%;
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width:770px){
+    #content{
+        flex-wrap: wrap;
+        & > .info{
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .map{height: 300px;}
+    }
+}
+
