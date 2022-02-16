@@ -505,6 +505,7 @@
     background-color: rgba($color: $black, $alpha: 0.5);
         top: 0;
         left: 0;
+        display: none;
     & > .content{
         background-color: $white;
         width: 675px;
@@ -515,3 +516,4 @@
         padding: 48px 24px;
     }
 }
+

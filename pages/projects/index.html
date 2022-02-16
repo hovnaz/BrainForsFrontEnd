@@ -13,14 +13,16 @@
     <header id="header">
         <div class="container">
             <div class="left">
-                <img class="logo" src="../../static/icon/logo.svg" alt="logo">
+                <a href="../../pages/home/index.html">
+                    <img class="logo" src="../../static/icon/logo.svg" alt="logo">
+                </a>
             </div>
             <div class="right">
                 <ul class="nav">
-                    <li class="anim item">Projects</li>
-                    <li class="anim item">Choose an apartment </li>
-                    <li class="anim item">Contact</li>
-                    <li class="anim item">Discounts</li>
+                    <li class="anim item"><a href="../projects/index.html">Projects</a></li>
+                    <li class="anim item"><a href="../apartment/index.html">Choose an apartment</a></li>
+                    <li class="anim item"><a href="../ContactUs/index.html">Contact</a></li>
+                    <li class="anim item"><a href="../SpecialOffers/index.html">Discounts</a></li>
                     <li>
                         <a href="#" class="btn-orange-bg phone">
                             <img src="../../static/icon/phone.svg" alt="phone">
@@ -32,15 +34,35 @@
                             <img src="../../static/icon/liveIconInBanner.svg" alt="liveIconInBanner">
                         </a>
                     </li>
-                    <li class="anim item">Hy</li>
+                    <li id="header-lang" class="anim item">
+                        <button>
+                            Hy
+                            <img src="../../static/icon/dropdown-down.svg" alt="icon">
+                        </button>
+                        <div class="content">
+                            <div>Hy</div>
+                            <div>Rus</div>
+                            <div>...</div>
+                        </div>
+                    </li>
                     <li class="anim item">Log In</li>
-                    <li class="menu">
+                    <li class="menu" onclick="$('#toggle-menu-header').fadeToggle(300)">
                         <img src="../../static/icon/menu-bar.svg" alt="menu">
                     </li>
                 </ul>
             </div>
         </div>
     </header>
+    <div class="container-row" id="toggle-menu-header">
+        <div class="container">
+            <ul class="nav">
+                <li class="anim item"><a href="../projects/index.html">Projects</a></li>
+                <li class="anim item"><a href="../apartment/index.html">Choose an apartment</a></li>
+                <li class="anim item"><a href="../ContactUs/index.html">Contact</a></li>
+                <li class="anim item"><a href="../SpecialOffers/index.html">Discounts</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="stack">
         <img class="left" src="../../static/png/stack.png" alt="stack">
@@ -283,15 +305,17 @@
             </div>
             <div class="right">
                 <ul class="nav">
-                    <li class="anim item">Home</li>
-                    <li class="anim item">Projects</li>
-                    <li class="anim item">Choose an apartment </li>
-                    <li class="anim item">Contact info</li>
-                    <li class="anim item">Discounts</li>
-                    <li class="anim item">Privacy policy</li>
-                    <li class="anim item">Terms of use</li>
+                    <li class="anim item"><a href="../../pages/home/index.html">Home</a></li>
+                    <li class="anim item"><a href="../../pages/chooseApt/index.html">Choose an apartment</a></li>
+                    <li class="anim item"><a href="../../pages/ContactUs/index.html">Contact info</a></li>
+                    <li class="anim item"><a href="../../pages/apartment/index.html">apartment</a></li>
+
+                    <li class="anim item"><a href="../../pages/PrivacyPolicy/index.html">PrivacyPolicy</a></li>
+                    <li class="anim item"><a href="../../pages/projectDetails/index.html">projectDetails</a></li>
+                    <li class="anim item"><a href="../../pages/SpecialOffers/index.html">SpecialOffers</a></li>
+                    <li class="anim item"><a href="../../pages/user/index.html">user</a></li>
                     <li class="item">
-                        <a href="#" class="btn-orange-bg">
+                        <a href="../../pages/ContactUs/index.html" class="btn-orange-bg">
                             <img src="../../static/icon/phone.svg" alt="phone">
                             (+374) 15-15-54
                         </a>
@@ -305,13 +329,13 @@
             <footer id="footer-copyright">
                 <span>Copyright © 2021 New City. All rights reserved</span>
                 <span>
-                    <a href="#">
+                    <a href="https://vk.com">
                         <img src="../../static/icon/vk.svg" alt="vk">
                     </a>
-                    <a href="#">
+                    <a href="https://www.facebook.com/">
                         <img src="../../static/icon/fb.svg" alt="fb">
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com">
                         <img src="../../static/icon/twitter.svg" alt="twitter">
                     </a>
                     <a href="#">
@@ -319,11 +343,11 @@
                     </a>
                 </span>
             </footer>
-    
+
             </footer>
         </div>
     </div>
-
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>

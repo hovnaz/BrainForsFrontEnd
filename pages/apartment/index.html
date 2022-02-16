@@ -85,7 +85,7 @@
                     <div class="item" data-title="Location">Alek Manukyan 1</div>
                     <div class="item" data-title="Completed date">20.12.2021</div>
                 </div>
-                <button class="btn-orange">Book this apartment</button>
+                <button class="btn-orange" onclick="$('#popup-apartment').fadeIn(300)">Book this apartment</button>
             </div>
         </div>
         <div class="content">
@@ -197,11 +197,31 @@
             </footer>
         </div>
     </div>
-
-    <div class="popup">
-        <div class="content"></div>
+    <div class="popup" id="popup-apartment">
+        <div class="content">
+            <div onclick="$('.popup').fadeOut(300)">X</div>
+            <div class="left">
+                <h3>Ամրագրման հարցում</h3>
+                <p>Էրեբունի Բնակելի Թաղամաս</p>
+                <h3>հարկ</h3>
+                <p>1</p>
+                <h3>բն. չափերը</h3>
+                <p>155 մ²</p>
+                <h3>բնակարանի համարը</h3>
+                <p>A125</p>
+            </div>
+            <div class="right">
+                <form action="javascript:void(0)"></form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="email">
+                <input type="phone" placeholder="email">
+                <input type="checkbox">
+                <button type="submit">submit</button>
+                <p>Սեղմելով կոճակը, դուք համաձայնում եք </p>
+            </div>
+        </div>
     </div>
-
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>
