@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    
 
-
+    <script src="../../js/data.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,20 +18,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/function.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header id="header">
         <div class="container">
             <div class="left">
-                <img class="logo" src="../../static/icon/logo.svg" alt="logo">
+                <a href="../../pages/home/index.html">
+                    <img class="logo" src="../../static/icon/logo.svg" alt="logo">
+                </a>
             </div>
             <div class="right">
                 <ul class="nav">
-                    <li class="anim item">Projects</li>
-                    <li class="anim item">Choose an apartment </li>
-                    <li class="anim item">Contact</li>
-                    <li class="anim item">Discounts</li>
+                    <li class="anim item"><a href="../projects/index.html">Projects</a></li>
+                    <li class="anim item"><a href="../apartment/index.html">Choose an apartment</a></li>
+                    <li class="anim item"><a href="../ContactUs/index.html">Contact</a></li>
+                    <li class="anim item"><a href="../SpecialOffers/index.html">Discounts</a></li>
                     <li>
                         <a href="#" class="btn-orange-bg phone">
                             <img src="../../static/icon/phone.svg" alt="phone">
@@ -43,16 +47,35 @@
                             <img src="../../static/icon/liveIconInBanner.svg" alt="liveIconInBanner">
                         </a>
                     </li>
-                    <li class="anim item">Hy</li>
+                    <li id="header-lang" class="anim item">
+                        <button>
+                            Hy
+                            <img src="../../static/icon/dropdown-down.svg" alt="icon">
+                        </button>
+                        <div class="content">
+                            <div>Hy</div>
+                            <div>Rus</div>
+                            <div>...</div>
+                        </div>
+                    </li>
                     <li class="anim item">Log In</li>
-                    <li class="menu">
+                    <li class="menu" onclick="$('#toggle-menu-header').fadeToggle(300)">
                         <img src="../../static/icon/menu-bar.svg" alt="menu">
                     </li>
                 </ul>
             </div>
         </div>
     </header>
-
+    <div class="container-row" id="toggle-menu-header">
+        <div class="container">
+            <ul class="nav">
+                <li class="anim item"><a href="../projects/index.html">Projects</a></li>
+                <li class="anim item"><a href="../apartment/index.html">Choose an apartment</a></li>
+                <li class="anim item"><a href="../ContactUs/index.html">Contact</a></li>
+                <li class="anim item"><a href="../SpecialOffers/index.html">Discounts</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="container">
         <div id="form-filter-btn">
             <h2>Choose your apartment</h2>
@@ -61,54 +84,93 @@
         <div id="form">
             <div class="content">
                 <div class="top">
-                    <span class="select-input" data-select="Region" data-placeholder="Region"></span>
-                    <span class="select-input" data-select="District" data-placeholder="District"></span>
-                    <span class="select-input half" data-select="floor" data-placeholder="floor"></span>
+                    <button class="select-input" data-name="region" data-select="empty" data-placeholder="Region">
+                        <span class="icon"></span>
+                        <div class="content">
+                            <span data-select-item="Yrevan"></span>
+                            <span data-select-item="Gyumri"></span>
+                            <span data-select-item="USA"></span>
+                        </div>
+                    </button>
+                    <button class="select-input" data-name="address" data-select="empty" data-placeholder="District">
+                        <span class="icon"></span>
+                        <div class="content">
+                            <span data-select-item="Arm"></span>
+                            <span data-select-item="RUS"></span>
+                            <span data-select-item="USA"></span>
+                        </div>
+                    </button>
+                    <button class="select-input half" data-name="floor" data-select="empty" data-placeholder="floor">
+                        <span class="icon"></span>
+                        <div class="content">
+                            <span data-select-item="1"></span>
+                            <span data-select-item="2"></span>
+                            <span data-select-item="3"></span>
+                            <span data-select-item="4"></span>
+                        </div>
+                    </button>
                 </div>
                 <div class="down">
                     <div class="item room">
                         <h2 class="header">Number of rooms</h2>
                         <label class="container-checkbox">
-                            <input type="checkbox" checked="checked">
+                            <input type="checkbox" checked="checked" name="room" value="1">
                             <span class="checkmark">1</span>
                         </label>
                         <label class="container-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" name="room" value="2">
                             <span class="checkmark">2</span>
                         </label>
                         <label class="container-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" name="room" value="3">
                             <span class="checkmark">3</span>
                         </label>
                         <label class="container-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" name="room" value="4">
                             <span class="checkmark">4</span>
                         </label>
                         <label class="container-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" name="room" value="5">
                             <span class="checkmark">5</span>
                         </label>
                     </div>
                     <div class="item btn">
-                        <button class="btn-orange-border">Special offers</button>
+                        <button class="btn-orange-border" id="special-offers">Special offers</button>
                     </div>
                     <div class="item slide-range">
-                        <div class="slidecontainer">
-                            <input type="range" min="1" max="100" value="50" class="slider">
+                        <div class="container-slide">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div id="slider-range"></div>
+                              </div>
+                            </div>
+                            <div class="row slider-labels">
+                              <div class="col-xs-6 caption text-left">
+                                <strong>Min:</strong> <span id="slider-range-value1"></span>
+                              </div>
+                              <div class="col-xs-6 text-right caption">
+                                <strong>Max:</strong> <span id="slider-range-value2"></span>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <form>
+                                  <input type="hidden" name="min-value" value="">
+                                  <input type="hidden" name="max-value" value="">
+                                </form>
+                              </div>
+                            </div>
                           </div>
                     </div>
                 </div>
             </div>
-
             <div class="alert">
                 <h4>Found apartments</h4>
-                <h2>25</h2>
-                <button><img src="../../static/icon/close.svg" alt="close"> Remove Filters</button>
+                <h2 id="count-apartments">0</h2>
+                <button id="reset-filter"><img src="../../static/icon/close.svg" alt="close"> Remove Filters</button>
             </div>
         </div>
     </div>
-
-
 
 
 
@@ -118,294 +180,13 @@
 
 
 
-    <div class="container" style="display: flex;justify-content: center;flex-flow: wrap;">
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="header owl-carousel owl-theme">
-                <img src="../../static/jpg/1.jpg" alt="image">
-                <img src="../../static/jpg/2.jpg" alt="image">
-                <img src="../../static/jpg/3.jpg" alt="image">
-            </div>
-            <div class="content">
-                <h2>Project “Riven’’ </h2>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                        Location, address
-                    </span>
-                </span>
-                <span class="item">
-                    <span>
-                        <img src="../../static/icon/floor.svg" alt="bulding">
-                        3 floor
-                    </span>
-                    <span>
-                        <img src="../../static/icon/size.svg" alt="bulding">
-                        52 sqft
-                    </span>
-                    <span>
-                        <img src="../../static/icon/door.svg" alt="bulding">
-                        4 rooms
-                    </span>
-                </span>
-
-            </div>
-        </div>
+    <div class="container" style="display: flex;justify-content: center;flex-flow: wrap;" id="project-card-page">
     </div>
     <div class="container">
-        <div class="pages">
-            <span class="active">1</span>
-            <span>2</span>
-            <span>3</span>
-        </div>
+        <div class="pages"></div>
     </div>
+
+
 
 
 
@@ -416,15 +197,17 @@
             </div>
             <div class="right">
                 <ul class="nav">
-                    <li class="anim item">Home</li>
-                    <li class="anim item">Projects</li>
-                    <li class="anim item">Choose an apartment </li>
-                    <li class="anim item">Contact info</li>
-                    <li class="anim item">Discounts</li>
-                    <li class="anim item">Privacy policy</li>
-                    <li class="anim item">Terms of use</li>
+                    <li class="anim item"><a href="../../pages/home/index.html">Home</a></li>
+                    <li class="anim item"><a href="../../pages/chooseApt/index.html">Choose an apartment</a></li>
+                    <li class="anim item"><a href="../../pages/ContactUs/index.html">Contact info</a></li>
+                    <li class="anim item"><a href="../../pages/apartment/index.html">apartment</a></li>
+
+                    <li class="anim item"><a href="../../pages/PrivacyPolicy/index.html">PrivacyPolicy</a></li>
+                    <li class="anim item"><a href="../../pages/projectDetails/index.html">projectDetails</a></li>
+                    <li class="anim item"><a href="../../pages/SpecialOffers/index.html">SpecialOffers</a></li>
+                    <li class="anim item"><a href="../../pages/user/index.html">user</a></li>
                     <li class="item">
-                        <a href="#" class="btn-orange-bg">
+                        <a href="../../pages/ContactUs/index.html" class="btn-orange-bg">
                             <img src="../../static/icon/phone.svg" alt="phone">
                             (+374) 15-15-54
                         </a>
@@ -438,13 +221,13 @@
             <footer id="footer-copyright">
                 <span>Copyright © 2021 New City. All rights reserved</span>
                 <span>
-                    <a href="#">
+                    <a href="https://vk.com">
                         <img src="../../static/icon/vk.svg" alt="vk">
                     </a>
-                    <a href="#">
+                    <a href="https://www.facebook.com/">
                         <img src="../../static/icon/fb.svg" alt="fb">
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com">
                         <img src="../../static/icon/twitter.svg" alt="twitter">
                     </a>
                     <a href="#">
@@ -456,8 +239,6 @@
             </footer>
         </div>
     </div>
-
-
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
@@ -466,16 +247,8 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop: false,
-            margin: 35,
-            nav: true,
-            dots: false,
-            navText: ['<img src="../../static/icon/arrow-left.svg" alt="left">', '<img src="../../static/icon/arrow-right.svg" alt="right">'],
-            items: 1,
-        })
-    </script>
+    <script src="script.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/slideRange.js"></script>
 </body>
-
 </html>

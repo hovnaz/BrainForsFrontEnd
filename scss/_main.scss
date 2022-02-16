@@ -250,6 +250,7 @@
 
 
 
+
 // ********************* Header bg baner *********************
 
 
@@ -463,3 +464,54 @@
     }
 }
 
+
+#header-lang{
+    position: relative;
+    overflow: inherit !important;
+    & > button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: inherit;
+        cursor: pointer;
+    }
+    & > .content{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        box-shadow: 0 0 5px #868686;
+        border-radius: 5px;
+        top: 35px;
+        display: none;
+        & > div{
+            padding: 8px 16px;
+            color: $neutrals-black;
+            transition: 300ms;
+            &:hover{
+                background-color: $grey-1;
+            }
+        }
+    }
+}
+
+
+
+.popup{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999999999999999999999999999999;
+    background-color: rgba($color: $black, $alpha: 0.5);
+        top: 0;
+        left: 0;
+    & > .content{
+        background-color: $white;
+        width: 675px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+        padding: 48px 24px;
+    }
+}

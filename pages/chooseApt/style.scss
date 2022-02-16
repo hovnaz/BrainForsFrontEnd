@@ -59,8 +59,24 @@
             display: flex;
             justify-content: flex-start;
             .select-input{
+                background-color: $white;
                 &.half{
                     width: 50%;
+                }
+                &.show{
+                    & > .icon{transform: rotate(0);}
+                }
+                & > .icon{
+                    background-image: url("../../static/icon/select-close.svg");
+                    background-position: right 15px center;
+                    background-repeat: no-repeat;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    width: 48px;
+                    height: 20px;
+                    transform: rotate(180deg);
+                    transition: 300ms;
                 }
                 width: 100%;
 
@@ -74,10 +90,7 @@
                 border: 1px solid $grey-2;
                 border-radius: 4px;
                 cursor: pointer;
-                background-image: url("../../static/icon/select-close.svg");
-                background-position: right 15px center;
-                background-repeat: no-repeat;
-                &.open{transform: rotate(180deg);}
+
                 &::before{
                     content: attr(data-placeholder);
                     position: absolute;
@@ -95,6 +108,33 @@
                     top: 0;
                     left: 0;
                     color: $grey-4;
+                }
+                & > .content{
+                    position: absolute;
+                    width: 100%;
+                    background-color: #fff;
+                    z-index: 9999;
+                    top: 46px;
+                    left: 0px;
+                    box-shadow: 0 0 15px #ccc;
+                    border-radius: 3px;
+                    color: #000;
+                    display: none;
+                    & > span{
+                        position: relative;
+                        display: block;
+                        transition: 300ms;
+                        &::before{
+                            content: attr(data-select-item);
+                            display: block;
+                            color: $grey-4;
+                            padding: 8px 16px;
+                        }
+                        &:hover{
+                            background-color: $grey-1;
+                            color: $neutrals-black;
+                        }
+                    }
                 }
             }
         }
@@ -128,17 +168,24 @@
                 color: $neutrals-black;
                 border: solid 1px $orange;
                 font-size: 14px;
+                transition: 300ms;
+                cursor: pointer;
+                &:hover{
+                    background-color: $orange;
+                    color: #fff;
+                }
             }
-        }
-        
+        }   
     }
+    
     & > .alert{
         padding: 10px 50px;
         padding-right: 0;
         border-left: 1px solid #ccc;
         color: $neutrals-black;
         text-align: center;
-        & > *{
+        & > #reset-filter{display: none;}
+        & > *:not(#reset-filter){
             display: block;
             margin: 0 auto;
             text-align: center;
@@ -197,11 +244,6 @@
     color: $neutrals-black;
   }
 }
-.slidecontainer {
-    width: 100%;
-    @include select-range;
-  }
-
 
 
 
@@ -241,3 +283,163 @@
         padding: 0 32px;
     }
 }
+
+
+
+.text-right,.text-left{
+    position: absolute;
+    top: 0;
+}
+.text-left{left: 0;}
+.text-right{right: 0;}
+
+
+/* This line can be removed it was just for display on CodePen: */
+.container-slide {
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  .slider-labels {
+    margin-top: 10px;
+  }
+  
+  /* Functional styling;
+   * These styles are required for noUiSlider to function.
+   * You don't need to change these rules to apply your design.
+   */
+  .noUi-target,.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .noUi-target {
+    position: relative;
+    direction: ltr;
+  }
+  
+  .noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  /* Fix 401 */
+  }
+  
+  .noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .noUi-handle {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .noUi-stacking .noUi-handle {
+  /* This class is applied to the lower origin when
+     its values is > 50%. */
+    z-index: 10;
+  }
+  
+  .noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s,top .3s;
+    transition: left 0.3s,top .3s;
+  }
+  
+  .noUi-state-drag * {
+    cursor: inherit !important;
+  }
+  
+  /* Painting and performance;
+   * Browsers can paint handles in their own layer.
+   */
+  .noUi-base,.noUi-handle {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  
+  /* Slider size and handle placement;
+   */
+  .noUi-horizontal {
+    height: 4px;
+  }
+  
+  .noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    left: -7px;
+    top: -7px;
+    background-color: #345DBB;
+  }
+  
+  /* Styling;
+   */
+  .noUi-background {
+    background: #D6D7D9;
+  }
+  
+  .noUi-connect {
+    background: #345DBB;
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+  }
+  
+  .noUi-origin {
+    border-radius: 2px;
+  }
+  
+  .noUi-target {
+    border-radius: 2px;
+  }
+  
+  
+  /* Handles and cursors;
+   */
+  .noUi-draggable {
+    cursor: w-resize;
+  }
+  
+  .noUi-vertical .noUi-draggable {
+    cursor: n-resize;
+  }
+  
+  .noUi-handle {
+    cursor: default;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+  }
+  
+  .noUi-handle:active {
+    border: 8px solid #345DBB;
+    border: 8px solid rgba(53,93,187,0.38);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    left: -14px;
+    top: -14px;
+  }
+  
+  /* Disabled state;
+   */
+  [disabled].noUi-connect,[disabled] .noUi-connect {
+    background: #B8B8B8;
+  }
+  
+  [disabled].noUi-origin,[disabled] .noUi-handle {
+    cursor: not-allowed;
+  }
+
+
+
