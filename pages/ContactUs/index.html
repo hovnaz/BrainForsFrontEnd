@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -65,8 +65,6 @@
         </div>
     </div>
 
-
-
     <div class="container" id="content">
         <div class="info">
             <h2>Contact us</h2>
@@ -75,7 +73,7 @@
                 <img src="../../static/icon/location.svg" alt="icon">
                 Alek Manukyan 1
             </span>
-            <span class="row">
+            <span class="row" >
                 <img src="../../static/icon/gmail.svg" alt="icon">
                 newcity@gmai.com
             </span>
@@ -91,13 +89,12 @@
                 <img src="../../static/icon/viber.svg" alt="icon">
                 +374 35 -45-55
             </span>
-            <button class="btn-orange">Contact us</button>
+            <button data-popup="#contact" class="btn-orange">Contact us</button>
         </div>
         <div class="map">
             <iframe id="map" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="100%"></iframe>
         </div>
     </div>
-
 
 
     <div class="stack">
@@ -154,8 +151,19 @@
             </footer>
         </div>
     </div>
-
+    <div class="popup" id="contact">
+        <div class="content">
+            <div class="close" onclick="$('.popup').fadeOut(300)"><img src="../../static/icon/close-x.svg" alt="close"></div>
+            <form action="javascript:void(0)">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="phone" placeholder="077123456">
+                <input type="text" placeholder="theme">
+                <textarea placeholder="Message"></textarea>
+                <input type="submit" value="">
+            </form>
+        </div>
+    </div>
     <script src="../../js/script.js"></script>
 </body>
-
 </html>

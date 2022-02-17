@@ -13,8 +13,6 @@ $(document).ready(function(){
         $(`.vim-slide-item${name}`).show();
     });
   });
-
-
 var page;
 class Page{
   constructor(place,btn,count=9){

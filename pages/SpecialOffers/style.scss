@@ -9,8 +9,7 @@
     grid-column-gap: 20px;
     grid-row-gap: 25px;
     
-    & > .item{
-
+    & > a > .item{
         position: relative;
         background-color: $white;
         padding: 20px;

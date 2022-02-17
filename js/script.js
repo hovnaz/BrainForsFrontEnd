@@ -8,3 +8,6 @@ $(document).ready(function () {
       });
 });
 
+$("[data-popup]").click(function () {
+  $($(this).data("popup")).fadeIn(300);
+});

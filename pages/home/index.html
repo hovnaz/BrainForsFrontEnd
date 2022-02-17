@@ -22,7 +22,7 @@
 
 
     <script src="../../js/function.js"></script>
-
+    <script src="../../js/data.js"></script>
 </head>
 
 <body>
@@ -91,7 +91,7 @@
                     Text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer took a galley of
                 </p>
-                <button class="btn-orange">See more</button>
+                <a href="../../pages/projects/"><button class="btn-orange">See more</button></a>
             </div>
 
         </div>
@@ -112,85 +112,9 @@
 
         </div>
     </div>
-    <!-- template generator -->
-    <script>
-        data = [
-            {
-                img:"jpg/1.jpg",
-                title:"Project “Riven’’",
-                address:"Location, address",
-                apartments:24,
-                apt:"39-52",
-                parking:4,
-            },
-            {
-                img:"jpg/2.jpg",
-                title:"Project “Riven’’",
-                address:"Location, address",
-                apartments:24,
-                apt:"39-52",
-                parking:4,
-            },
-            {
-                img:"jpg/3.jpg",
-                title:"Project “Riven’’",
-                address:"Location, address",
-                apartments:24,
-                apt:"39-52",
-                parking:4,
-            },
-            {
-                img:"jpg/4.jpg",
-                title:"Project “Riven’’",
-                address:"Location, address",
-                apartments:24,
-                apt:"39-52",
-                parking:4,
-            }
-        ];
-        data.forEach(item => {
-            $("#project-card-det").append(`
-            <div class="project-card">
-                <div class="header">
-                    <img src="${STATIC_SRC}/${item.img}" alt="image">
-                    <footer class="footer">
-                        <button><img src="${STATIC_SRC}/icon/video-map.svg" alt="video"></button>
-                        <button><img src="${STATIC_SRC}/icon/campus.svg" alt="campus"></button>
-                    </footer>
-                </div>
-                <div class="content">
-                    <h2>${item.title}</h2>
-                    <span class="item">
-                        <span>
-                            <img src="${STATIC_SRC}/icon/location-pin.svg" alt="location-pin">
-                            ${item.address}
-                        </span>
-                    </span>
-                    <span class="item">
-                        <span>
-                            <img src="../../static/icon/bulding-2.svg" alt="bulding">
-                            ${item.apartments} apartments
-                        </span>
-                        <span>apt size ${item.apt}</span>
-                    </span>
-                    <span class="item">
-                        <span>
-                            <img src="../../static/icon/car-park.svg" alt="car parking">
-                            ${item.parking} parking / 22
-                        </span>
-                    </span>
-                    <footer class="footer">
-                        <button><img src="../../static/icon/stack-list.svg" alt="stack list"></button>
-                        <button><img src="../../static/icon/live-camera-full.svg" alt="live"></button>
-                    </footer>
-                </div>
-            </div>
-            `);
-        });
-    </script>
 
     <div class="container" style="display: flex;flex-direction: row-reverse;">
-        <button class="btn-border-orange">See More</button>
+        <a href="../projects/index.html"><button class="btn-border-orange">See More</button></a>
     </div>
     <div class="container-row">
         <div class="container">
@@ -222,73 +146,6 @@
         <div class="owl-carousel owl-theme" id="best-offers">
         </div>
     </div>
-
-    <!-- template generator -->
-    <script>
-        data = [
-            {
-                img:"jpg/1.jpg",
-                address:"Location, address",
-                floor:3,
-                sqft:52,
-                rooms:4, 
-            },
-            {
-                img:"jpg/2.jpg",
-                address:"Location, address",
-                floor:3,
-                sqft:52,
-                rooms:4, 
-            },
-            {
-                img:"jpg/3.jpg",
-                address:"Location, address",
-                floor:3,
-                sqft:52,
-                rooms:4, 
-            },
-            {
-                img:"jpg/4.jpg",
-                address:"Location, address",
-                floor:3,
-                sqft:52,
-                rooms:4, 
-            },
-        ];
-        data.forEach(item => {
-            $("#best-offers").append(`
-            <div class="project-card">
-                <div class="header">
-                    <img src="${STATIC_SRC}/${item.img}" alt="image">
-                </div>
-                <div class="content">
-                    <span class="item">
-                        <span>
-                            <img src="../../static/icon/location-pin.svg" alt="location-pin">
-                            ${item.address}
-                        </span>
-                    </span>
-                    <span class="item">
-                        <span>
-                            <img src="../../static/icon/floor.svg" alt="floor">
-                            ${item.floor} floor
-                        </span>
-                        <span>
-                            <img src="../../static/icon/size.svg" alt="size">
-                            ${item.sqft} sqft
-                        </span>
-                        <span>
-                            <img src="../../static/icon/door.svg" alt="rooms">
-                            ${item.rooms} rooms
-                        </span>
-                    </span>
-
-                </div>
-            </div>
-            `);
-        });
-    </script>
-
     <div class="container-row">
         <div class="container" style="display: flex; justify-content: center;padding: 62px 0;flex-flow: wrap;" id="inner-card">
             <div class="inner-card-title" style="opacity: 0;"></div>
@@ -316,24 +173,7 @@
     <div class="container">
         <div class="owl-carousel owl-theme" id="image-slide-footer"></div>
     </div>
-    <!-- template generator -->
-    <script>
-        data = [
-            {img:"jpg/1.jpg"},
-            {img:"jpg/2.jpg"},
-            {img:"jpg/3.jpg"},
-            {img:"jpg/4.jpg"},
-        ];
-        data.forEach(item => {
-            $("#image-slide-footer").append(`
-                <div class="project-card">
-                    <div class="header">
-                        <img src="${STATIC_SRC}/${item.img}" alt="image">
-                    </div>
-                </div>
-            `);
-        });
-    </script>
+
 
     
 
@@ -396,33 +236,33 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop: false,
-            margin: 35,
-            nav: true,
-            dots: false,
-            navText: ['<img src="../../static/icon/arrow-left.svg" alt="left">', '<img src="../../static/icon/arrow-right.svg" alt="right">'],
-            items: 3,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                770: {
-                    items: 2
-                },
-                990: {
-                    items: 2
-                },
-                1400: {
-                    items: 3
-                }
-            }
-        })
-    </script>
-
-
+    <div class="popup" id="video">
+        <div class="content">
+            <div class="close" onclick="$('.popup').fadeOut(300)"><img src="../../static/icon/close-x.svg" alt="close"></div>
+            <iframe width="1061" height="786" src="https://www.youtube.com/embed/PiwpDkbquNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="popup" id="map">
+        <div class="content">
+            <div class="close" onclick="$('.popup').fadeOut(300)"><img src="../../static/icon/close-x.svg" alt="close"></div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="1061" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:1061px;}</style><a href="https://www.embedgooglemap.net">google embed map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:1061px;}</style></div></div>
+        </div>
+    </div>
+    
     <script src="../../js/script.js"></script>
+    <script src="script.js"></script>
+    <script src="../../js/slideshow.js"></script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

@@ -74,18 +74,18 @@
             </header>
             <div class="content">
                 <div class="row">
-                    <div class="item" data-title="Apt number">52122</div>
-                    <div class="item" data-title="Floor">4 from 6</div>
+                    <div class="item" data-title="Apt number" data-name="apt number">52122</div>
+                    <div class="item" data-title="Floor" data-name="floor">4 from 6</div>
                 </div>
                 <div class="row">
-                    <div class="item" data-title="Rooms">4</div>
-                    <div class="item" data-title="Prking size">22 square</div>
+                    <div class="item" data-title="Rooms" data-name="rooms">4</div>
+                    <div class="item" data-title="Prking size" data-name="parking">22 square</div>
                 </div>
                 <div class="row">
-                    <div class="item" data-title="Location">Alek Manukyan 1</div>
-                    <div class="item" data-title="Completed date">20.12.2021</div>
+                    <div class="item" data-title="Location" data-name="location">Alek Manukyan 1</div>
+                    <div class="item" data-title="Completed date" data-name="completed date">20.12.2021</div>
                 </div>
-                <button class="btn-orange" onclick="$('#popup-apartment').fadeIn(300)">Book this apartment</button>
+                <button class="btn-orange" id="popup-apartment-click" onclick="$('#popup-apartment').fadeIn(300)">Book this apartment</button>
             </div>
         </div>
         <div class="content">
@@ -125,7 +125,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="container text-only">
         <p>
@@ -197,31 +196,57 @@
             </footer>
         </div>
     </div>
+
+
+
+    <div class="row">
+        <div class="item" data-title="Rooms" data-name="rooms">4</div>
+        <div class="item" data-title="Prking size" data-name="parking">22 square</div>
+    </div>
+    <div class="row">
+        <div class="item" data-title="Location" data-name="location">Alek Manukyan 1</div>
+        <div class="item" data-title="Completed date" data-name="completed date">20.12.2021</div>
+    </div>
+
     <div class="popup" id="popup-apartment">
         <div class="content">
-            <div onclick="$('.popup').fadeOut(300)">X</div>
+            <div class="close" onclick="$('.popup').fadeOut(300)"><img src="../../static/icon/close-x.svg" alt="close"></div>
             <div class="left">
                 <h3>Ամրագրման հարցում</h3>
-                <p>Էրեբունի Բնակելի Թաղամաս</p>
-                <h3>հարկ</h3>
-                <p>1</p>
-                <h3>բն. չափերը</h3>
-                <p>155 մ²</p>
-                <h3>բնակարանի համարը</h3>
-                <p>A125</p>
+                <h4>Apt number</h4>
+                <p data-name="apt number"></p>
+                
+                <h4>Floor</h4>
+                <p data-name="floor"></p>
+
+                <h4>Rooms</h4>
+                <p data-name="rooms"></p>
+
+                <h4>Parking</h4>
+                <p data-name="parking"></p>
+
+
+                <h4>Location</h4>
+                <p data-name="location"></p>
+
+                <h4>Completed Date</h4>
+                <p data-name="completed date"></p>
             </div>
             <div class="right">
-                <form action="javascript:void(0)"></form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="email">
-                <input type="phone" placeholder="email">
-                <input type="checkbox">
-                <button type="submit">submit</button>
+                <form action="javascript:changeData()">
+                    <input type="text" placeholder="apt number" data-name="apt number">
+                    <input type="text" placeholder="floor" data-name="floor">
+                    <input type="text" placeholder="rooms" data-name="rooms">
+                    <input type="text" placeholder="parking" data-name="parking">
+                    <input type="text" placeholder="location" data-name="location">
+                    <input type="text" placeholder="completed date" data-name="completed date">
+                    <button type="submit">submit</button>
+                </form>
                 <p>Սեղմելով կոճակը, դուք համաձայնում եք </p>
             </div>
         </div>
     </div>
     <script src="../../js/script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
