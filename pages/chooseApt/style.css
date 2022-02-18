@@ -450,6 +450,10 @@ body {
   transition: 300ms;
 }
 
+.owl-prev img, .owl-next img {
+  width: 16px !important;
+}
+
 .owl-prev:hover, .owl-next:hover {
   background-color: transparent !important;
 }
@@ -900,10 +904,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.project-card img {
-  width: 100%;
 }
 
 .container > .project-card {

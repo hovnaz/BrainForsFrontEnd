@@ -40,7 +40,7 @@ projects.forEach(item => {
     `);
 });
 
-apartment.forEach(item => {
+apartments.forEach(item => {
     $("#best-offers").append(`
     <a href="../../pages/apartment/index.html">
         <div class="project-card">

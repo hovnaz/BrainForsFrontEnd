@@ -21,6 +21,10 @@ function changeData(storageU=false){
                 $(`[data-name="${name}"]`).text(value);
                 dataStorage[name] = value;
             }
+            // save data
+            setStorage();
+            // setCookiE();
+            changeData();
             break main;
         }
         else if (storageU == "Storage" && (storage || storage == "")) {
@@ -51,8 +55,9 @@ window.onload = function (e) {
     changeData("Storage");
     // changeData("Cookie");
 };
-window.onbeforeunload = function (e) {
-    setStorage();
-    // setCookiE();
-    changeData();
-};
+// if close page 
+// window.onbeforeunload = function (e) {
+//     // setStorage();
+//     // setCookiE();
+//     changeData();
+// };

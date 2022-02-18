@@ -145,8 +145,8 @@
         .project-card{
             width: 325px;
         }
-        .owl-prev { left: -30px; }
-        .owl-next { right: -30px; }
+        .owl-prev { left: -30px;}
+        .owl-next { right: -30px;}
     } 
 }
 .container-row{
@@ -215,11 +215,14 @@
     top: 50%;
     cursor: pointer;
     transition: 300ms;
+    img{
+        width: 16px !important;
+    }
     &:hover{
         background-color: transparent !important;
     }
 }
-.owl-prev { left: -40px; }
+.owl-prev { left: -40px;}
 .owl-next { right: -40px; }
 .owl-prev i, .owl-next i {transform : scale(2,5); color: #ccc;}
 .owl-nav{display: block !important;}
@@ -591,9 +594,4 @@
 a{
     text-decoration: none;
     color: inherit;
-}
-.project-card{
-    img{
-        width: 100%;
-    }
 }
