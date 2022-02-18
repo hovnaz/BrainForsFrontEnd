@@ -22,7 +22,7 @@
             <div class="right">
                 <ul class="nav">
                     <li class="anim item"><a href="../projects/index.html">Projects</a></li>
-                    <li class="anim item"><a href="../apartment/index.html">Choose an apartment</a></li>
+                    <li class="anim item"><a href="../chooseApt/index.html">Choose an apartment</a></li>
                     <li class="anim item"><a href="../ContactUs/index.html">Contact</a></li>
                     <li class="anim item"><a href="../SpecialOffers/index.html">Discounts</a></li>
                     <li>
@@ -74,7 +74,7 @@
             </header>
             <div class="content">
                 <div class="row">
-                    <div class="item" data-title="Apt number" data-name="apt number">52122</div>
+                    <div class="item" data-title="Apt number" data-name="aptNumber">52122</div>
                     <div class="item" data-title="Floor" data-name="floor">4 from 6</div>
                 </div>
                 <div class="row">
@@ -83,7 +83,7 @@
                 </div>
                 <div class="row">
                     <div class="item" data-title="Location" data-name="location">Alek Manukyan 1</div>
-                    <div class="item" data-title="Completed date" data-name="completed date">20.12.2021</div>
+                    <div class="item" data-title="Completed date" data-name="completedDate">20.12.2021</div>
                 </div>
                 <button class="btn-orange" id="popup-apartment-click" onclick="$('#popup-apartment').fadeIn(300)">Book this apartment</button>
             </div>
@@ -205,7 +205,7 @@
     </div>
     <div class="row">
         <div class="item" data-title="Location" data-name="location">Alek Manukyan 1</div>
-        <div class="item" data-title="Completed date" data-name="completed date">20.12.2021</div>
+        <div class="item" data-title="Completed date" data-name="completedDate">20.12.2021</div>
     </div>
 
     <div class="popup" id="popup-apartment">
@@ -214,7 +214,7 @@
             <div class="left">
                 <h3>Ամրագրման հարցում</h3>
                 <h4>Apt number</h4>
-                <p data-name="apt number"></p>
+                <p data-name="aptNumber"></p>
                 
                 <h4>Floor</h4>
                 <p data-name="floor"></p>
@@ -230,16 +230,16 @@
                 <p data-name="location"></p>
 
                 <h4>Completed Date</h4>
-                <p data-name="completed date"></p>
+                <p data-name="completedDate"></p>
             </div>
             <div class="right">
-                <form action="javascript:changeData()">
-                    <input type="text" placeholder="apt number" data-name="apt number">
+                <form action="javascript:changeData('input')" id="apartment-form">
+                    <input type="text" placeholder="apt number" data-name="aptNumber">
                     <input type="text" placeholder="floor" data-name="floor">
                     <input type="text" placeholder="rooms" data-name="rooms">
                     <input type="text" placeholder="parking" data-name="parking">
                     <input type="text" placeholder="location" data-name="location">
-                    <input type="text" placeholder="completed date" data-name="completed date">
+                    <input type="text" placeholder="completed date" data-name="completedDate">
                     <button type="submit">submit</button>
                 </form>
                 <p>Սեղմելով կոճակը, դուք համաձայնում եք </p>
